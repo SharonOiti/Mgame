@@ -1,0 +1,107 @@
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        background-image:url(Mgame.jpg) ;
+        overflow: hidden;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .container {
+        margin-top: 20%;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+      #game {
+        display: grid;
+        grid-template-columns: repeat(5, 100px);
+        grid-gap: 10px;
+      }
+      
+      #game div {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border: 2px solid #ddd;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+      }
+      
+      #game div.flipped {
+        background-color: #f0f0f0;
+        cursor: default;
+      }
+      div {
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      div.flipped {
+        transform: rotateY(180deg);
+      }
+      
+      @keyframes flip {
+        from {
+          transform: rotateY(0);
+        }
+        to {
+          transform: rotateY(180deg);
+      }
+      }
+      body {
+        animation: colorChange 5s infinite;
+        position: relative;
+      }
+      
+      @keyframes colorChange {
+        0% { background-color: #ff9999; }
+        50% { background-color: #99ff99; }
+        100% { background-color: #9999ff; }
+      }
+      .text-overlay {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3em;
+        color: white;
+        font-family: 'Permanent Marker', Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px #000000,0 0 10px red,0 0 15px red,0 0 20px red;
+        z-index: 10; /* Ensure the text is above the cards */
+      }
+      
+      .card {
+        position: relative;
+        z-index: 5; /* Ensure the cards are below the text */
+      }
+      #score {
+        position: absolute;
+        top: 5%; /* Adjust the position as needed */
+        right: 5%; /* Adjust the position as needed */
+        font-size: 3em; /* Make the font size even bigger */
+        color: yellow; /* A bright color for visibility */
+        text-shadow: 2px 2px 5px black, 0 0 10px red;
+        font-family: 'Permanent Marker', sans-serif; /* Cool font style */
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        padding: 10px; /* Add some padding */
+        border-radius: 10px; /* Rounded corners for style */
+      }
